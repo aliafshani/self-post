@@ -9,7 +9,7 @@ import Home from "./afterLogin/Home/Home";
 const router = createBrowserRouter(
     createRoutesFromElements(
         <>
-            <Route exact path="" element={< Home />} />
+            <Route exact path="/self-post/" element={< Home />} />
 
         </>
     )
