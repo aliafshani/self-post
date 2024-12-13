@@ -2,10 +2,12 @@ import React from 'react'
 
 export default function PillButton({ onClick, children }) {
     return (
-        <button onClick={() => onClick(true)} class="relative hover:bg-purple-800 [box-shadow:rgba(50,_50,_93,_0.25)_0px_13px_27px_-5px,_rgba(0,_0,_0,_0.3)_0px_8px_16px_-8px] w-fit h-fit px-5 py-2 text-md text-sm rounded-lg focus:bg-purple-800 bg-purple-800 text-white">
+        <button onClick={() => onClick(true)} class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-sm text-sm px-5 py-2.5 text-center me-2">
             <p>
                 {children}
             </p>
         </button>
     )
 }
+
+{/* <button type="button" >Purple to Pink</button> */ }

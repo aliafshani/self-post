@@ -10,26 +10,27 @@ import { createPortal } from "react-dom";
 export default function FilterBox() {
     const [showModal, setShowModal] = useState(false)
     return (
-        <div className='w-10/12 flex bg-white mt-20 pt-4 flex-wrap justify-center mx-auto h-max pb-20 rounded-md [box-shadow:rgba(50,_50,_93,_0.25)_0px_13px_27px_-5px,_rgba(0,_0,_0,_0.3)_0px_8px_16px_-8px]'>
-            <div className='w-4/12 mx-4' >
+        <div className='w-10/12 flex flex-col md:flex-row bg-white mt-0 flex-wrap justify-center mx-auto h-max py-20 rounded-sm [box-shadow:rgba(0,_0,_0,_0.1)_0px_10px_15px_-3px,_rgba(0,_0,_0,_0.05)_0px_4px_6px_-2px]'>
+            <div className='w-11/12 md:w-4/12 mx-4' >
                 <Select name={"مبدا"} firstOption={"آمریکا"} icon={<FaLocationDot />} />
+
             </div>
-            <div className='w-4/12 mx-4' >
+            <div className='w-11/12 md:w-4/12 mx-4' >
                 <Select name={"مقصد"} firstOption={"اتخاب کنید"} icon={<FaLocationCrosshairs />} />
             </div>
-            <div className='w-4/12 mx-4' >
-                <Select name={"وزن محموله"} firstOption={"وزن را وارد کنید"} icon={<LuLuggage />} type={"input"} />
+            <div className='w-11/12 md:w-4/12 mx-4' >
+                <Select name={"وزن محموله"} firstOption={"وزن را وارد کنید"} icon={<FaWeightScale />} type={"input"} />
             </div>
-            <div className='w-4/12 mx-4' >
-                <Select name={"مبدا"} firstOption={"آمریکا"} icon={<FaWeightScale />} />
+            <div className='w-11/12 md:w-4/12 mx-4' >
+                <Select name={"نوع کالا"} firstOption={"سایر"} icon={<LuLuggage />} />
             </div>
-            <div className='w-4/12 mx-4' >
+            <div className='w-11/12 md:w-4/12 mx-4' >
                 <button
                     onClick={() => setShowModal(true)}
                     type="button"
                     data-modal-target="timepicker-modal"
                     data-modal-toggle="timepicker-modal"
-                    className="bg-purple-800 text-white rounded-lg flex px-8 py-2"
+                    className="bg-purple-800 w-full md:w-auto text-white rounded-sm flex px-8 py-2"
                 >
                     <svg
                         className="w4 h-4 me-1"
@@ -53,9 +54,9 @@ export default function FilterBox() {
                     showModal
                     && createPortal(<TimeModal onClose={() => setShowModal(false)} />, document.getElementById("modals-parent"))}
             </div>
-            <div className='w-4/12 mx-4' >
+            <div className='w-11/12 mx-auto md:w-auto md:mx-0 text-center' >
                 <button
-                    className="bg-purple-800 text-white rounded-lg flex px-8 py-2"
+                    className="bg-purple-800 w-full mx-auto md:w-auto md:mx-0 mt-3 md:mt-0 text-white rounded-sm flex text-center py-2"
                 >
                     جست و جو
                 </button>

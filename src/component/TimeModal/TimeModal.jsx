@@ -15,7 +15,7 @@ export default function TimeModal({ onClose }) {
 
     return (
         <div className={"model-parent active"}>
-            <div className="w-full md:w-5/12 mx-auto h-52 pt-10 rounded-lg bg-white">
+            <div className="w-11/12 mx-auto md:w-5/12 h-52 pt-10 rounded-sm bg-white px-3">
                 <div className="w-full  md:w-6/12 mx-auto">
                     <h1 className="text-xl text-purple-800 font-bold mb-5">لطفا بازه سفر خود را انتخاب کنید !</h1>
                     <Datepicker
@@ -25,7 +25,7 @@ export default function TimeModal({ onClose }) {
                         showShortcuts={true}
 
                     />
-                    <button onClick={() => onClose()} className="px-4 py-2 rounded-lg mt-5 bg-purple-800 text-white ">Submit</button>
+                    <button onClick={() => onClose()} className="px-4 py-2 rounded-sm mt-5 bg-purple-800 text-white ">Submit</button>
 
                 </div>
             </div>
